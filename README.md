@@ -7,14 +7,15 @@ Campaign ROI: £30 per pound spent
 High-performing regions: Africa & North America (Campaign ID 008)
 Underperforming region: Asia (Campaign ID 009)
 
-Strategic Frameworks Used
-✅ BCG Matrix:
+Strategic Frameworks Used:
+
+BCG Matrix:
 Stars: High-growth & profitable categories (Health Care & Beauty)
 Cash Cows: Steady revenue but require cost optimization (Baby & Family Care)
 Question Marks: Underperforming campaigns needing strategy refinement (Asia)
 Dogs: Low-demand products requiring reassessment
 
-✅ Ansoff Matrix:
+Ansoff Matrix:
 Market Penetration: Expand successful campaigns in high-performing regions
 Product Development: Introduce localized products to underperforming regions
 Market Development: Strengthen presence in Europe & Asia through tailored campaigns
