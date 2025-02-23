@@ -1,28 +1,73 @@
-# F-K-Sales-Analysis
-This project analyzes sales performance and marketing campaign effectiveness for P&G, providing data-driven insights to optimize profitability, regional expansion, and strategic decision-making. Using BCG Matrix and Ansoff Matrix, the analysis categorizes product performance and explores growth strategies for different markets.
+**1. Executive Summary**
 
-Key Insights
-Total Sales Volume: 50M | Total Profit: £10M | Profit Margin: 19.62%
-Campaign ROI: £30 per pound spent
-High-performing regions: Africa & North America (Campaign ID 008)
-Underperforming region: Asia (Campaign ID 009)
+**Objective:**  
+This analysis focuses on cleaning and analyzing healthcare data to uncover patterns in patient demographics, salary distribution, credit scores, and health conditions. By identifying missing values, inconsistencies, and trends, we aim to improve data quality and extract meaningful insights.
 
-Strategic Frameworks Used:
 
-BCG Matrix:
-Stars: High-growth & profitable categories (Health Care & Beauty)
-Cash Cows: Steady revenue but require cost optimization (Baby & Family Care)
-Question Marks: Underperforming campaigns needing strategy refinement (Asia)
-Dogs: Low-demand products requiring reassessment
 
-Ansoff Matrix:
-Market Penetration: Expand successful campaigns in high-performing regions
-Product Development: Introduce localized products to underperforming regions
-Market Development: Strengthen presence in Europe & Asia through tailored campaigns
-Diversification: Explore cross-selling opportunities for high-income customer segments
+**2. Introduction**
 
-Key Actions & Recommendations
-Leverage high-ROI campaigns to optimize marketing investments
-Expand successful regional strategies to underperforming markets
-Optimize manufacturing costs in cash cow product categories
-Use predictive analytics to anticipate seasonal demand shifts
+**Business Problem:**  
+The dataset contains inconsistencies such as missing values, duplicate records, incorrect data types, and formatting issues. The goal is to clean the dataset and perform exploratory data analysis (EDA) to identify trends in age, salary, credit score, and health conditions.
+
+**Data Source:**  
+The dataset was imported from an Excel file containing patient information, including age, salary, health condition, blood type, city, credit score, and education level.
+
+
+
+**3. Data Cleaning Steps**
+
+**3.1 Issues Identified:**  
+- Duplicate IDs and names (mixed upper and lower cases)
+- Missing values in Age, Blood Type, Education, and Health Condition columns
+- City names with inconsistent formatting
+- Negative salaries
+- Credit Score column containing non-numeric values ('N/A')
+- Date column needing proper formatting
+
+**3.2 Cleaning Process in Python:**  
+- Converted all names to uppercase first, then lowercase.
+- Filled missing values appropriately:
+  - Age and Credit Score were imputed with the median.
+  - Blood Type and Education were filled with the most frequent value.
+  - Health Condition was imputed with 'Unknown'.
+- Standardized city names to proper case format (first letter uppercase, rest lowercase).
+- Converted Credit Score to numeric, replacing non-numeric values.
+- Removed negative salary values.
+- Converted the date column to a standard date format.
+
+
+
+**4. Exploratory Data Analysis (EDA) & Findings**
+
+**4.1 Salary Distribution:**  
+- The salary distribution is right-skewed, with most individuals earning within a lower range.
+- Some extreme high salaries exist but are rare.
+
+**4.2 Age Distribution:**  
+- The dataset contains a wide range of ages, with the majority of individuals between 25-45 years old.
+- Some missing age values were imputed with the median.
+
+**4.3 Credit Score vs Salary:**  
+- A weak positive correlation was found between credit score and salary.
+- Higher salaries generally align with higher credit scores, but there are exceptions.
+
+**4.4 Health Condition Distribution:**  
+- The most common health conditions recorded include hypertension and diabetes.
+- A significant portion of records had missing health conditions, which were filled as 'Unknown'.
+
+
+
+**5. Recommendations**
+
+- Implement a validation system to prevent negative salary inputs.
+- Encourage proper data entry practices to minimize missing values in critical fields like health conditions and education.
+- Conduct further analysis on factors influencing credit scores, possibly integrating loan and financial history.
+- Enhance healthcare interventions by identifying patterns in health conditions related to age and salary groups.
+
+
+
+**6. Conclusion**
+
+This healthcare data analysis highlights the importance of data cleaning in ensuring accuracy and reliability. Insights from EDA suggest key trends in salary, credit scores, and health conditions, which can guide further research and policy-making in healthcare and financial planning. The next steps include predictive modeling for risk assessment and patient profiling to improve healthcare delivery and financial inclusion.
+
