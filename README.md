@@ -1,73 +1,84 @@
-**1. Executive Summary**
+Here’s your revised **Power BI Sales and Campaign Analysis** summary using singular pronouns and replacing **P&G** with **F&K**:  
+
+
+
+**1. Executive Summary**  
 
 **Objective:**  
-This analysis focuses on cleaning and analyzing healthcare data to uncover patterns in patient demographics, salary distribution, credit scores, and health conditions. By identifying missing values, inconsistencies, and trends, we aim to improve data quality and extract meaningful insights.
+I conducted this analysis to evaluate **sales performance and campaign effectiveness** for F&K, uncovering patterns in **sales trends, regional campaign performance, product profitability, and customer engagement.** By identifying high-performing and underperforming areas, my goal was to optimize marketing strategies, improve profitability, and enhance data-driven decision-making.  
 
+ 
 
-
-**2. Introduction**
+**2. Introduction**  
 
 **Business Problem:**  
-The dataset contains inconsistencies such as missing values, duplicate records, incorrect data types, and formatting issues. The goal is to clean the dataset and perform exploratory data analysis (EDA) to identify trends in age, salary, credit score, and health conditions.
+The dataset contains key sales and marketing data, but there are challenges such as **seasonal sales fluctuations, regional disparities in campaign performance, and variations in product profitability.** My objective was to analyze these trends using **Power BI dashboards** to provide actionable insights.  
 
 **Data Source:**  
-The dataset was imported from an Excel file containing patient information, including age, salary, health condition, blood type, city, credit score, and education level.
+I imported the dataset from a structured sales database containing information on **product categories, sales volume, profit margins, campaign IDs, regional sales data, and customer engagement metrics.**  
 
+ 
 
-
-**3. Data Cleaning Steps**
+**3. Data Cleaning & Preparation**  
 
 **3.1 Issues Identified:**  
-- Duplicate IDs and names (mixed upper and lower cases)
-- Missing values in Age, Blood Type, Education, and Health Condition columns
-- City names with inconsistent formatting
-- Negative salaries
-- Credit Score column containing non-numeric values ('N/A')
-- Date column needing proper formatting
+- Missing or inconsistent campaign IDs.  
+- Duplicate product category entries due to formatting variations.  
+- Inconsistent date formats in sales transactions.  
+- Non-numeric values in the sales and profit columns.  
+- Regional names with inconsistent capitalization.  
 
-**3.2 Cleaning Process in Python:**  
-- Converted all names to uppercase first, then lowercase.
-- Filled missing values appropriately:
-  - Age and Credit Score were imputed with the median.
-  - Blood Type and Education were filled with the most frequent value.
-  - Health Condition was imputed with 'Unknown'.
-- Standardized city names to proper case format (first letter uppercase, rest lowercase).
-- Converted Credit Score to numeric, replacing non-numeric values.
-- Removed negative salary values.
-- Converted the date column to a standard date format.
+**3.2 Cleaning Process in Power BI:**  
+- Standardized campaign IDs and product categories.  
+- Removed duplicate entries.  
+- Fixed date formatting for proper time-based analysis.  
+- Converted sales and profit columns to numeric data types.  
+- Standardized region names for consistency.  
+
+ 
+
+**4. Exploratory Data Analysis (EDA) & Findings**  
+
+**4.1 Sales Trends Analysis:**  
+- **Peak sales months:** November showed the highest sales volume, indicating strong seasonal demand.  
+- **Underperforming periods:** December missed opportunities compared to November, suggesting room for better marketing strategies.  
+
+**4.2 Product Category Profitability:**  
+- **Top-performing products:** Health Care and Beauty products generated the highest profit margins.  
+- **Low-performing categories:** Baby & Family Care had lower profitability, requiring cost optimization.  
+
+**4.3 Campaign Performance by Region:**  
+- **Successful regions:** Africa & North America had strong engagement, particularly with Campaign ID 008.  
+- **Underperforming regions:** Asia (Campaign ID 009) struggled due to possible cultural misalignment or ineffective marketing.  
+
+**4.4 Campaign ROI Analysis:**  
+- **ROI per pound spent:** £30 return for every £1 spent on marketing.  
+- **High-impact campaigns:** Campaign ID 008 showed the best results and should be scaled.  
+
+  
+
+**5. Recommendations**  
+
+**Sales Optimization:**  
+- Extend November’s high-performing strategies into December to maintain momentum.  
+- Introduce promotional campaigns for February (e.g., Valentine's Day) to drive sales.  
+
+**Product & Pricing Strategy:**  
+- Invest in Health Care and Beauty categories for higher profitability.  
+- Optimize manufacturing costs for Baby & Family Care products.  
+
+**Regional Marketing Improvements:**  
+- Scale Campaign ID 008 to other regions.  
+- Adjust messaging and product selection in Asia to improve engagement.  
+
+**Campaign Performance Tracking:**  
+- Use **predictive analytics** to anticipate seasonal sales patterns.  
+- Implement **real-time monitoring** of active campaigns to adjust strategies dynamically.  
 
 
 
-**4. Exploratory Data Analysis (EDA) & Findings**
+**6. Conclusion**  
 
-**4.1 Salary Distribution:**  
-- The salary distribution is right-skewed, with most individuals earning within a lower range.
-- Some extreme high salaries exist but are rare.
+This Power BI-driven analysis provides **valuable insights into sales trends, product profitability, and campaign effectiveness.** By leveraging **BCG and Ansoff Matrix frameworks**, I identified key areas for growth, regional expansion, and improved marketing strategies. The next steps include **predictive modeling for sales forecasting** and refining marketing efforts using customer segmentation analysis.  
 
-**4.2 Age Distribution:**  
-- The dataset contains a wide range of ages, with the majority of individuals between 25-45 years old.
-- Some missing age values were imputed with the median.
-
-**4.3 Credit Score vs Salary:**  
-- A weak positive correlation was found between credit score and salary.
-- Higher salaries generally align with higher credit scores, but there are exceptions.
-
-**4.4 Health Condition Distribution:**  
-- The most common health conditions recorded include hypertension and diabetes.
-- A significant portion of records had missing health conditions, which were filled as 'Unknown'.
-
-
-
-**5. Recommendations**
-
-- Implement a validation system to prevent negative salary inputs.
-- Encourage proper data entry practices to minimize missing values in critical fields like health conditions and education.
-- Conduct further analysis on factors influencing credit scores, possibly integrating loan and financial history.
-- Enhance healthcare interventions by identifying patterns in health conditions related to age and salary groups.
-
-
-
-**6. Conclusion**
-
-This healthcare data analysis highlights the importance of data cleaning in ensuring accuracy and reliability. Insights from EDA suggest key trends in salary, credit scores, and health conditions, which can guide further research and policy-making in healthcare and financial planning. The next steps include predictive modeling for risk assessment and patient profiling to improve healthcare delivery and financial inclusion.
 
